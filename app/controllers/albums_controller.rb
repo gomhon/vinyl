@@ -8,9 +8,18 @@ class AlbumsController < ApplicationController
   def destroy
   end
 
-  def create
-  end
+   def create
+     @album = Album.new(album_params)
+     if @album.save
+       redirect_to root_path
+     end
+   end
 
   def show
   end
+
+  private
+    def album_params
+   params.require(:album).permit(:title, :description, :genre)
+    end
 end
