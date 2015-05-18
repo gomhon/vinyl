@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'albums/index'
+
+  get 'albums/new'
+
+  get 'albums/destroy'
+
+  get 'albums/create'
+
+  get 'albums/show'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
